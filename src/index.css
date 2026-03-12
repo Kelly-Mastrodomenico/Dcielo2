@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Lato:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Paleta DCielo ── */
+:root {
+  --oro:           #C69B1A;
+  --oro-oscuro:    #9A7510;
+  --negro:         #1A1208;
+  --crema:         #FAF6EC;
+  --crema-oscura:  #F0E9D6;
+  --tierra:        #5C5040;
+  --borde:         #E8DFCC;
+
+  /* Compatibilidad con componentes existentes */
+  --color-primary:        #C69B1A;
+  --color-primary-hover:  #9A7510;
+  --color-secondary:      #1A1208;
+  --color-accent:         #C69B1A;
+  --color-background:     #FAF6EC;
+  --color-paper:          #F0E9D6;
+  --color-subtle:         #F5F0E8;
+  --color-text-main:      #1A1208;
+  --color-text-muted:     #5C5040;
+  --color-text-light:     #8C7A60;
+  --color-border:         #E8DFCC;
+}
+
+body {
+  margin: 0;
+  font-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-background);
+  color: var(--color-text-main);
+}
+
+.font-serif {
+  font-family: 'Playfair Display', serif;
+}
+
+.font-handwriting {
+  font-family: 'Caveat', cursive;
+}
+
+/* Scrollbar con colores DCielo */
+::-webkit-scrollbar       { width: 8px; }
+::-webkit-scrollbar-track { background: var(--color-subtle); }
+::-webkit-scrollbar-thumb { background: var(--oro); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--oro-oscuro); }
+
+::selection {
+  background-color: var(--oro);
+  color: var(--negro);
+}
+
+/* Utilidades globales */
+.container-custom {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section-padding {
+  padding: 5rem 0;
+}
+
+@media (max-width: 768px) {
+  .section-padding { padding: 3rem 0; }
+}
+
+/* Animaciones suaves en imágenes */
+img { transition: opacity 0.3s ease; }
+
+/* Sombras con tono dorado */
+.shadow-dcielo     { box-shadow: 0 4px 24px rgba(198,155,26,.15); }
+.shadow-dcielo-lg  { box-shadow: 0 12px 40px rgba(198,155,26,.20); }
